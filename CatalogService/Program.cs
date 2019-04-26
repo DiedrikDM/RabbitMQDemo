@@ -53,7 +53,7 @@ namespace CatalogService
     private static void SendTrackAddedMessage(IModel channel)
     {
       var trackId = Guid.NewGuid();
-      var integrationEvent = new TrackRemovedIntegrationEvent(trackId.ToString(), "Love is all you need");
+      var integrationEvent = new TrackAddedIntegrationEvent(trackId.ToString(), "Love is all you need");
 
       var json = JsonConvert.SerializeObject(integrationEvent);
       var body = Encoding.UTF8.GetBytes(json);
