@@ -14,10 +14,10 @@ namespace CatalogService
       using (var connection = factory.CreateConnection())
       using (var channel = connection.CreateModel())
       {
-        channel.QueueDeclare(queue: "queue_tracks",
-                             durable: false,
-                             exclusive: false,
-                             autoDelete: false);
+        //channel.QueueDeclare(queue: "queue_tracks",
+        //                     durable: false,
+        //                     exclusive: false,
+        //                     autoDelete: false);
 
         channel.ExchangeDeclare(exchange: "topic_tracks",
                                   durable: true,
